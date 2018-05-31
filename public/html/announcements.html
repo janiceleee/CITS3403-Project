@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title> Announcements </title>
+        <link href="style.css" rel="stylesheet">
+        <script src="javascript.js"></script>
+    </head>
+
+    <body>
+        <div class="nav" id="navigation">
+            <script>loggedInNav();</script>
+        </div>
+
+        <div class="header">
+            <h1>Announcements</h1>
+        </div>
+
+        <div id='announcements' class='content'>
+            <h2>New Announcements</h2>
+            <p id='no-announcement'>There is no new announcements.</p>
+        </div>
+
+        <div id='add' class='content'>
+            <h2>Add Announcement</h2>
+            <input type='text' id='title' class='textbox' placeholder="Title" required> 
+            <textarea id='content' placeholder="Announcement"></textarea><br>
+            <input type='button' class='button' value="Add Announcement" onclick="addAnnouncement()">
+        </div>
+
+        <div class="footer" id="footer">
+            <div class='column-middle' id='loggedInLink' >
+                <script>loggedInLinks();</script>
+            </div>
+            <div class='content-middle' id="timeStamp" style='float:right'>
+                <script>getTimeStamp();</script>
+            </div>
+        </div>
+    </body>
+</html>

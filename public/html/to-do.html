@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title> To-Do </title>
+        <link href="style.css" rel="stylesheet">
+        <script src="javascript.js"></script>
+    </head>
+
+    <body onload='addPlaceholder("date")'>
+        <div class="nav" id="navigation">
+                <script>loggedInNav();</script>
+        </div>
+
+        <div class="header">
+            <h1>To-Do</h1>
+        </div>
+
+        <div class='column-left' style="width:45%" id='add-todo'>
+            <h3>To-Do</h3>
+            <input type="text" class="textbox" id="todo" placeholder="To Do">
+            <br>
+        </div>
+
+        <div class='column-middle' style='width:20%' id='add-date'>
+            <h3>Deadline</h3>
+            <input type="date" class="textbox" id="date">
+            <br>
+        </div>
+        <div class='column-right' style='width:10%' id='add-checkbox'>
+            <br>
+            <input type="button" id="add" class="button" value="Add" onclick="addTodo()">
+            <br>
+        </div>
+
+        <div class='row'></div>
+        
+        <div class="footer" id="footer">
+            <div class='column-middle' id='loggedInLink' >
+                <script>loggedInLinks();</script>
+            </div>
+            <div class='content-middle' id="timeStamp" style='float:right'>
+                <script>getTimeStamp();</script>
+            </div>
+        </div>
+    </body>
+</html>

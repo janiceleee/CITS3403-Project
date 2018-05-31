@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		title  Announcements 
+		link(href='style.css', rel='stylesheet')
+		script(src='javascript.js')
+	body
+		#navigation.nav
+			script.
+				loggedInNav();
+		.header
+			h1 Announcements
+		#announcements.content
+			h2 New Announcements
+			p#no-announcement There is no new announcements.
+		#add.content
+			h2 Add Announcement
+			input#title.textbox(type='text', placeholder='Title', required='')
+			textarea#content(placeholder='Announcement')
+			br
+			input.button(type='button', value='Add Announcement', onclick='addAnnouncement()')
+		#footer.footer
+			#loggedInLink.column-middle
+				script.
+					loggedInLinks();
+			#timeStamp.content-middle(style='float:right')
+				script.
+					getTimeStamp();

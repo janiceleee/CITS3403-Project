@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title> Log In </title>
+        <link href="style.css" rel="stylesheet">
+        <script src="javascript.js"></script>
+    </head>
+
+    <body>
+        <div class="nav" id="navigation">
+            <script>getNavigation();</script>
+        </div>
+
+        <div class="header">
+                <h1>Log In</h1>
+        </div>
+       
+        <div class="content">
+            <form action="announcements.html">
+                <table id="login">
+                    <tr>
+                        <td>Username: </td>
+                        <td><input type="text" class="textbox" name="Username" placeholder="JohnDoe" required></td>
+                    </tr>
+                    <tr>
+                        <td>Password: </td>
+                        <td><input type="password" class="textbox" name="Password" placeholder="Password" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" class="button" value="Log In"></td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2">Don't have an account? <a href="sign-up.html">Sign up now!</a></td>
+                    </tr>
+                </table>
+            </form>  
+        </div> 
+
+        <div class="footer" id="footer">
+            <div class='column-middle' id='link' >
+                <script>getLinks();</script>
+            </div>
+            <div class='content-middle' id="timeStamp" style='float:right'>
+                <script>getTimeStamp();</script>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    if (user)
+        .content
+            each project in projects
+                .box
+                    h2 #[a(href='/index/project/' + project._id, id=project._id) #{project.title}]
+                    p= project.description
+                .row
+        
+        .row
+        .content
+            button.button(onclick="document.getElementById('id01').style.display='block'") New Project
+            #id01.modal
+                .modal-content.popup.w3-animate-zoom(style='max-width:600px')
+                    .content
+                        form(action='/index/project/new', method="post")
+                            h2 Create a new project
+                            p  
+                                b Project name
+                            input.textbox(type='text', placeholder='Project Name', name='title', required='')
+                            br    
+                            p
+                                b Description
+                            input.textbox(type='text', placeholder='Add a Description', name='description')
+                            br
+                            input.button(type='submit' value='Create')
+                

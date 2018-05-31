@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  
+  if (user)
+    #announcements.content
+      h2 New Announcements
+      hr
+      each announcement in announcements
+        .announcement
+        h2=announcement.title
+        h4 by #{announcement.author}, #{announcement.date} 
+        p=announcement.description
+        a(href="/index/announcement/delete/" + announcement._id) Delete
+        hr
+    #add.content
+      h2 Add Announcement
+      form(action="/index/announcement" method='post')
+        input#title.textbox(type='text', name='title', placeholder='Title', required='')
+        textarea#content(name='announcement', placeholder='Announcement')
+        br
+        input.button(type='submit', value='Add Announcement')

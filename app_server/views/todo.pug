@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  if (user)
+    #add-todo.column-left(style='width:45%')
+      h3 To-Do
+    #add-date.column-middle(style='width:20%')
+      h3 Deadline
+    each todo in todos
+      .todo
+      #add-todo.column-left(style='width:45%')
+        p=todo.todo
+      #add-date.column-middle(style='width:20%')
+        p=todo.date
+      #add-checkbox.column-right(style='width:10%')
+        h3
+        a.button(href='/index/todo/delete/' + todo._id) Done
+
+    .row
+    br
+    form(action="/index/todo" method="post")
+      #add-todo.column-left(style='width:45%')
+        input#todo.textbox(type='text',name='todo', placeholder='To Do')
+        br
+      #add-date.column-middle(style='width:20%')
+        input#date.textbox(type='date', name='date')
+        br
+      #add-checkbox.column-right(style='width:10%')
+        input#add.button(type='submit', value='Add')
+        br
+    .row
+    br

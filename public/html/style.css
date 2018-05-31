@@ -1,0 +1,165 @@
+.header {
+    background-image: url('../images/header.jpg');
+    padding: 20px 10%;
+}
+
+.header > h1 {
+    background-color: rgba(213, 240, 202, 0.651);
+    padding: 1%;
+    margin:1%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url('http://www.handsmidia.com.br/wp-content/uploads/2017/03/1.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+
+    padding: 20px 10%;
+    background-color: rgba(179, 212, 165, 0.651);
+}
+
+body {
+    background-color: rgb(240, 255, 234);
+}
+
+.nav {
+    overflow: hidden;
+    background-color: rgb(38, 119, 56);
+    padding: 0% 10%;
+}
+
+.nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: rgb(16, 87, 14);
+    color: white;
+}
+h1 {
+    font-size: 40px;
+    font-family: Georgia, serif;
+}
+
+.content {
+    padding: 0% 10%;
+}
+
+.column-left {
+    float: left;
+    width: 35%;
+    padding-left:10%;
+    /*border: 1px solid #cdcfd3;*/
+}
+
+.column-middle {
+    float: left;
+    padding:0%;
+    /*border: 1px solid #cdcfd3;*/
+}
+
+.column-right {
+    float: right;
+    width: 35%;
+    padding-right:10%;
+    /*border: 1px solid #cdcfd3;*/
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.footer {
+    padding: 0% 10%;
+    /*background-color: #efefef;*/
+    text-align: right;
+}
+
+td {
+    height: 30px;
+    font-size: 16px;
+}
+
+.button {
+    border-radius: 5px;
+    background-color:  rgb(38, 119, 56);
+    color: white;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-size: 16px;
+    padding: 16px 32px;
+    text-align: center;
+    margin: 2px 2px;
+    border: none;
+}
+
+.button:hover {
+    background-color: rgb(16, 87, 14); 
+    color: white;
+}
+
+th{
+    text-align: left;
+    font-size: 30px;
+}
+
+select {
+    border-radius: 5px;
+    font-size: 14px;
+    height: 29px;
+}
+
+.textbox{
+    border-radius: 5px;
+    height:10px;
+    font-size: 16px;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    width: 70%;
+}
+
+textarea {
+    border-radius: 5px;
+    height:60px;
+    font-size: 16px;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    width: 95%;
+}
+
+hr {
+    padding: 0% 10%;
+}
+
+p{
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+}
+

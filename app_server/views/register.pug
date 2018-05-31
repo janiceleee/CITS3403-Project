@@ -1,0 +1,41 @@
+extends layout
+  
+block content
+  .content
+    if msg
+    p(style='color:red') #{msg}
+  .content
+    form(action='/register', method='post')
+      table#sign-up
+        tr
+          td First Name: 
+          td 
+            input#fName.textbox(type='text', name='firstname', placeholder='John')
+        tr
+          td Last Name: 
+          td
+            input#lName.textbox(type='text', name='lastname', placeholder='Doe')
+        tr
+          td Email: 
+          td
+            <!--pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"-->
+            input#email.textbox(type='text', name='email', placeholder='johndoe@email.com')
+        tr
+          td Username: 
+          td
+            input#username.textbox(type='text', name='username', placeholder='JohnDoe', required='')
+        tr
+          td Password: 
+          td
+            input#password.textbox(type='password', name='password', placeholder='Password', required='')
+        tr
+          td Confirm password: 
+          td
+            input#cPassword.textbox(type='password', name='cPassword', onsubmit='match();', placeholder='Password', required='')
+        tr
+          td(colspan='2')
+            input.button(type='submit', value='Get Started')
+        tr
+          td(colspan='2')
+            | Already have an account? 
+            a(href='/login') Log In here!

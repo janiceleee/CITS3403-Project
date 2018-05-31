@@ -1,0 +1,82 @@
+extends layout
+
+block content
+
+  if (user)
+    .content
+        if msg
+        p(style='color:red') #{msg}
+    .content
+    form(action='/index/account', method='post')
+        
+        .column-left(style='width:25%; height=10px')
+            p
+                b First Name:   
+                | #{user.firstname}
+        #firstname.column-middle(style='width:30%')
+        .column-right(id='changeFirst', style='width:10%')
+            input.button(type='button',value='Change', onclick='addTextbox("firstname", "New First Name"); removeButton("changeFirst"); ')
+        .row
+        .column-left(style='width:25%')
+            p
+                b Last Name:       
+                | #{user.lastname}
+        #lastname.column-middle(style='width:30%')
+        .column-right(id='changeLast', style='width:10%')
+            input.button(type='button',value='Change', onclick='addTextbox("lastname", "New Last Name"); removeButton("changeLast");')
+        .row
+        .column-left(style='width:25%')
+            p
+                b Email:    
+                | #{user.email}
+        #email.column-middle(style='width:30%')
+        .column-right(id='changeEmail', style='width:10%')
+            input.button(type='button',value='Change', onclick='addTextbox("email", "New Email"); removeButton("changeEmail");')
+        .row
+        .column-left(style='width:25%')
+            p
+                b Username: 
+                | #{user.username}
+        #nUsername.column-middle(style='width:30%')
+        .column-right(id='changeUser', style='width:10%')
+            input.button(type='button',value='Change', onclick='addTextbox("nUsername", "New Username"); removeButton("changeUser");')
+
+        .row
+        
+
+        .content
+            button.button(onclick="document.getElementById('change').style.display='block'") Confirm Changes
+            button.button(onclick="document.getElementById('del').style.display='block'") Delete Account
+        .row
+
+
+        #change.modal
+            .modal-content.popup.w3-animate-zoom(style='max-width:600px')
+                .content
+                h2 Confirm Changes
+                p  
+                    b Username
+                input.textbox(type='text', placeholder='Enter Username', name='username', required='')
+                br    
+                p
+                    b Password
+                input.textbox(type='password', placeholder='Enter Password', name='password', required='')
+                br
+                button.button(type='submit') Save Changes
+                button.button(onclick="document.getElementById('change').style.display='none'", type='button') Cancel
+
+    #del.modal
+        .modal-content.popup.w3-animate-zoom(style='max-width:600px')
+            .content
+            form(action='/index/account/delete', method='post')
+                h2 Are you sure?
+                p  
+                    b Username
+                input.textbox(type='text', placeholder='Enter Username', name='username', required='')
+                br    
+                p
+                    b Password
+                input.textbox(type='password', placeholder='Enter Password', name='password', required='')
+                br
+                button.button(type='submit') Delete
+                button.button(onclick="document.getElementById('del').style.display='none'", type='button') Cancel

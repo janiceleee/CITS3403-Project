@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .content
+    if msg
+    p(style='color:red') #{msg}
+    
+  .content
+    form(action='/login', method='post')
+      table#login
+        tr
+          td Username: 
+          td
+            input.textbox(type='text', name='username', placeholder='JohnDoe', required='')
+        tr
+          td Password: 
+          td
+            input.textbox(type='password', name='password', placeholder='Password', required='')
+        tr
+          td(colspan='2')
+            input.button(type='submit', value='Log In')
+        tr
+          td(colspan='2')
+            | Don't have an account? 
+            a(href='/register') Register now!

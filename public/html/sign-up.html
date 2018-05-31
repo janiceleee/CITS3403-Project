@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title> Sign up </title>
+        <link href="style.css" rel="stylesheet">
+        <script src="javascript.js"></script>
+    </head>
+
+    <body>
+        <div class="nav" id="navigation">
+            <script>getNavigation();</script>
+        </div>
+
+        <div class="header">
+            <h1>Sign Up</h1>
+        </div>
+
+        <div class="content">
+            <form action="announcements.html">
+                <table id="sign-up">
+                    <tr>
+                        <td>First Name: </td>
+                        <td><input type="text" class="textbox" name="First Name" id="fName" placeholder="John" required></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name: </td>
+                        <td><input type="text" class="textbox" name="Last Name" id="lName" placeholder="Doe" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email: </td>
+                        <td><input type="text" class="textbox" name="Email" id="email" pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" placeholder="johndoe@email.com" required></td>
+                    </tr>
+                    <tr>
+                        <td>Username: </td>
+                        <td><input type="text" class="textbox" name="Username" id="username" placeholder="JohnDoe" required></td>
+                    </tr>
+                    <tr>
+                        <td>Password: </td>
+                        <td><input type="password" class="textbox" name="Password" id="password" placeholder="Password" required /></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm password: </td>
+                        <td><input type="password" class="textbox" name="Password" id="cPassword" onkeyup="match();" placeholder="Password" required /></td>
+                        </tr>
+                    <tr>
+                        <td colspan="2" ><input type="submit" class="button" value="Get Started" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Already have an account? <a href="login.html">Log In here!</a></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        
+        <div class="footer" id="footer">
+            <div class='column-middle' id='link' >
+                <script>getLinks();</script>
+            </div>
+            <div class='content-middle' id="timeStamp" style='float:right'>
+                <script>getTimeStamp();</script>
+            </div>
+        </div>
+    </body>
+</html>

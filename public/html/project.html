@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title> Projects </title>
+        <link href="style.css" rel="stylesheet">
+        <script src="javascript.js"></script>
+    </head>
+
+    <body>
+        <div class="nav" id="navigation">
+            <script>loggedInNav();</script>
+        </div>
+
+        <div class="header">
+            <h1>Projects</h1>
+        </div>
+        
+        <div class="content" id='current-project'>
+            <h2>Current Projects</h2>
+            <p id='no-project'>There is currently no projects.</p>    
+        </div>
+
+        <div class="content">
+            <h2>Add a Project</h2>
+            <input type="text" id="project-name" class="textbox" placeholder="Project" style='width:64%' required='required'>
+                            
+            <input type="button" class="button" value="Add Task" onclick="addExtra('Task', 'add-task')">
+            <input type="button" class="button" value="Add Members" onclick="addExtra('Team Member', 'add-member')">
+        </div>
+        <div class='column-left' id='add-task'>
+            <input type='text' id='task' class='textbox' placeholder="Task" style='width:85%'>
+        </div>
+        <div class='column-right' id='add-member'>
+            <input type="text" id="member" class="textbox" placeholder="Team Leader" style='width:85%'>
+        </div>
+        <div class='row'></div>
+        <div class="content">
+            <input type="button" class="button" value="Add Project" onclick="getProject()">
+            <select id="privacy">
+                <option value="private">Private</option>
+                <option value="public">Public</option>
+            </select>
+        </div>
+
+        <div class="footer" id="footer">
+            <div class='column-middle' id='loggedInLink' >
+                <script>loggedInLinks();</script>
+            </div>
+            <div class='content-middle' id="timeStamp" style='float:right'>
+                <script>getTimeStamp();</script>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+extends layout
+
+block head 
+    style.
+      h1, h3, p {
+      padding: 0%;
+      margin: 0%;
+      }
+      .content, .column {
+      background-color: rgba(213, 240, 202, 0.651);
+      padding: 1%;
+      float: left;
+      margin: 1%;
+      }
+      .column {
+      width: 45%;
+      }
+      .icon {
+      width: 35px;
+      height: 35px;
+      vertical-align: middle;
+      resize: both;
+      }
+
+block content
+    .bg
+        .content
+            h1 Teamwork makes the dream work 
+            p#content
+              | Working in a team can be hard for everyone. Our website is here to help you with that! Designed for leaders and members, our website is designed to help team management easier! Specificly designed to help in the workplace, you can make announcements, arrange meetings, events, manage projects and even keep your own to do list!
+        .column
+            h3
+              img.icon(src='/images/announcement.ico', alt='Announcement')
+              |  Announcements
+            p
+              | Need to inform everyone about the new meeting time? Make an announcement! We'll make sure that your team members get informed as soon as the announcement is published.
+        .column
+            h3
+              img.icon(src='/images/event.png', alt='Event')
+              |  Events
+            p
+              | Create an event and invite your members. Be it a meeting or a team bonding activities, create the event, arrange the time and you're good to go.
+        
+        .row
+        .column
+            h3
+              img.icon(src='/images/project.png', alt='Project')
+              |  Projects
+            p
+              | Got a new project coming up? Or just have too many that it's becoming too hard to keep track of them. Add the project and we'll show every project you're involved in. If you're a team leader, invite your members to the project and add tasks for them to do. Or make the project public so that other people can join! Prioritise eash task so that your team members know which one to get to first.
+        .column
+            h3
+              img.icon(src='/images/todo.png', alt='To Do')
+              |  To Do
+            p
+              | Keep track of your own work with a to do list. Add a task and check it when you're done.
+        .column
+            h4
+              | Not a member yet? 
+              a(href='/register') Sign Up Now!
+              br
+              | Already have an account? 
+              a(href='/login') Sign In
+        .content
+            h3
+              img.icon(src='/images/algorithm.png', alt='Algorithm')
+              |  Our algorithm
+            p
+              | Want to be part of someone else's project? Or maybe you want to search up the details of that company event you're interested in.
+              | Just search them up and we'll show you a list of the most relevant events and projects you'll be interested in. For each public event and project, we'll generate a list of keywords that will make your searching easier.
+        .row

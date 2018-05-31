@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    title= title
+    block head
+    link(rel='stylesheet', href='/stylesheets/stylesheet.css')
+    script(src='/javascripts/javascript.js')
+  body(onload='startTime()')
+    #navigation.nav
+      if (!user)
+        script.
+          getNavigation();
+      if (user)
+        script.
+          loggedInNav();
+
+    if (title != 'Home')
+      .header
+        h1=title
+        
+    if (user)
+      .content
+        p Welcome #{user.firstname}
+
+    block content
+
+    .row
+      #footer.footer
+        #link.column-middle
+          if (!user)
+            script.
+              getLinks();
+          if (user)
+            script.
+              loggedInLinks();
+        #clock(style='float:right')
+        br
+        #timeStamp.content-middle(style='float:right')
+          script.
+            getTimeStamp();

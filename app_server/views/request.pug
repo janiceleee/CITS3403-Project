@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    if (!user)
+        .content
+            p(style='color:red')=msg
+        br
+        .content
+            a.button(href='/login') Login
+            a.button(href='/register') Register
+        br
+        .row
