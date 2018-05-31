@@ -4,14 +4,6 @@ function match() {
     }
 }
 
-function time() {
-    var d = new Date().toLocaleTimeString();
-    return ("The time is: " + d);
-}
-
-function lastModified() {
-    return ("Last modified: " + document.lastModified);
-}
 
 function getNavigation() {
     document.getElementById("navigation").innerHTML = '<a href="/">Home</a><a href="/login">Log In</a><a href="/register">Register</a><a href="/reference">References</a>';
@@ -30,7 +22,24 @@ function loggedInLinks() {
 }
 
 function getTimeStamp() {
-    document.getElementById("timeStamp").innerHTML = time() + "<br>" + lastModified();
+    document.getElementById("timeStamp").innerHTML =  "Last modified: " + document.lastModified;
+}
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    var t = setTimeout(startTime, 500);
+    document.getElementById('clock').innerHTML =
+    "The time is: " + h + ":" + m + ":" + s;
+}
+
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
 }
 
 function emptyTextbox(id) {
