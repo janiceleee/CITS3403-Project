@@ -5,7 +5,7 @@ var announcementSchema = new mongoose.Schema(
         title:String,
         description: String,
         author: String,
-        date: Date,
+        date: String,
     }
 );
 
