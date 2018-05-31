@@ -16,6 +16,10 @@ router.get('/login', ctrlAcc.loginForm);
 router.post('/login', ctrlAcc.login);
 router.get('/logout', ctrlAcc.logout);
 
+/*Meet Our Team page */
+router.get('/meetourteam', ctrlMain.meetourteam);
+module.exports = router;
+
 /*Reference page */
 router.get('/reference', ctrlMain.reference);
 module.exports = router;

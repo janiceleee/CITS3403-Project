@@ -33,8 +33,9 @@ html
           if (user)
             script.
               loggedInLinks();
-        #clock(style='float:right')
-        br
-        #timeStamp.content-middle(style='float:right')
-          script.
-            getTimeStamp();
+
+        .div(style='float:right')
+          #clock 
+          #timeStamp.content-middle
+            script.
+              getTimeStamp();

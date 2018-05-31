@@ -1,0 +1,56 @@
+extends layout
+
+block content
+
+
+ .content
+    // Meet our Team __________________________________________________________________
+    .meetourteam
+      br
+      h1 Have you met our team ? 
+      br
+      br
+
+      
+
+      // __________________________________________________________________
+      .meetourteamrow
+        .meetourteamcolumn
+          .meetourteamcard
+            img(src='/images/janice.jpg', alt='janice', style='width:100%')
+            
+            .meetourteamcontainer
+              h2 Janice Lee
+              p.title Founder
+              p
+                | A third year UWA student studying in Bachelor of Science majoring in Computer Science and Data Science.
+              p jan.lee888@hotmail.com
+              p
+                button.button(onclick="location.href='mailto:jan.lee888@hotmail.com'", type='button') Contact
+        // __________________________________________________________________
+        .meetourteamcolumn
+          .meetourteamcard
+            img(src='/images/jiaxun.jpg', alt='jiaxun', style='width:100%')
+            .meetourteamcontainer
+              h2 Jia Xun Ng
+              p.title Co-Founder
+              p A third year UWA student studying in Bachelor of Commerce majoring in Accounting and Data Science.
+              p jiaxunng@gmail.com
+              p
+                button.button(onclick="location.href='mailto:jiaxunng@gmail.com'", type='button') Contact
+        // __________________________________________________________________
+        .meetourteamcolumn
+          .meetourteamcard
+            img(src='/images/westie.jpg', alt='westie', style='width:100%')
+            // Source:https://www.pinterest.com.au/pin/352899320786040352/
+            .meetourteamcontainer
+              h2 Cutie
+              p.title Emotional Support Officer
+              p I am cute and nice to people. I like people patting my head.
+              p woof@gmail.com
+              p
+                button.button(onclick="location.href='mailto:woof@gmail.com'", type='button') Contact
+
+
+
+    
