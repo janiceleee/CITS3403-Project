@@ -3,7 +3,7 @@ mongoose = require('mongoose');
 todoSchema = new mongoose.Schema(
     {
         todo:String,
-        date: Date,
+        date: String,
         author: String,
     }
 )
