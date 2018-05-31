@@ -10,7 +10,7 @@ var localStrategy = require('passport-local').Strategy;
 
 var main = require('./app_server/routes/main');
 var index = require('./app_server/routes/index');
-var users = require('./app_server/routes/users');
+//var users = require('./app_server/routes/users');
 //var ctrlMain = require('./app_server/controllers/main');
 //var models = require('./app_server/models/db')
 
