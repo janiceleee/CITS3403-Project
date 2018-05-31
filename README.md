@@ -9,7 +9,8 @@ Steps:
 3. npm install passport-local
 4. nodemon ./bin/www (Local)
 
----Heroku
+//Heroku
+
 5. git init
 6. git add --all
 7. git commit -m "First commit"
