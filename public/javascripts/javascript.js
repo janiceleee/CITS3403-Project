@@ -6,19 +6,19 @@ function match() {
 
 
 function getNavigation() {
-    document.getElementById("navigation").innerHTML = '<a href="/">Home</a><a href="/login">Log In</a><a href="/register">Register</a><a href="/meetourteam">Meet Our Team</a><a href="/reference">References</a>';
+    document.getElementById("navigation").innerHTML = '<a href="/">Home</a><a href="/login">Log In</a><a href="/register">Register</a><a href="/meetourteam">Meet Our Team</a><a href="/description">Description</a><a href="/reference">References</a>';
 }
 
 function loggedInNav() {
-    document.getElementById("navigation").innerHTML = '<a href="/index/account">Account</a><a href="/index/announcement">Announcements</a><a href="/index/project">Projects</a><a href="/index/todo">To Do</a><a href="/meetourteam">Meet Our Team</a><a href="/reference">References</a><a href="/">Log Out</a>';
+    document.getElementById("navigation").innerHTML = '<a href="/index/account">Account</a><a href="/index/announcement">Announcements</a><a href="/index/project">Projects</a><a href="/index/todo">To Do</a><a href="/meetourteam">Meet Our Team</a><a href="/description">Description</a><a href="/reference">References</a><a href="/">Log Out</a>';
 }
 
 function getLinks() {
-    document.getElementById("link").innerHTML = '<br> <a href="/">Home</a> | <a href="/login">Log In</a> | <a href="/register">Register</a> | <a href="/meetourteam">Meet Our Team</a> | <a href="/reference">References</a>' ;
+    document.getElementById("link").innerHTML = '<br> <a href="/">Home</a> | <a href="/login">Log In</a> | <a href="/register">Register</a> | <a href="/meetourteam">Meet Our Team</a> |<a href="/description">Description</a>| <a href="/reference">References</a>' ;
 }
 
 function loggedInLinks() {
-    document.getElementById('link').innerHTML = '<br> <a href="/index/account">Account</a> | <a href="/index/announcement">Announcements</a> | <a href="/index/project">Projects</a> | <a href="/index/todo">To Do</a> | <a href="/meetourteam">Meet Our Team</a> | <a href="/reference">References</a>';
+    document.getElementById('link').innerHTML = '<br> <a href="/index/account">Account</a> | <a href="/index/announcement">Announcements</a> | <a href="/index/project">Projects</a> | <a href="/index/todo">To Do</a> | <a href="/meetourteam">Meet Our Team</a> |<a href="/description">Description</a>| <a href="/reference">References</a>';
 }
 
 function getTimeStamp() {

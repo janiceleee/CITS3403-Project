@@ -8,6 +8,12 @@ module.exports.meetourteam = function(req, res) {
     res.render('meetourteam', {title: 'Meet Our Team'});
 };
 
+/*Description page*/
+module.exports.description = function(req, res) {
+    res.render('description', {title: 'Description'});
+};
+
+
 
 /*Reference page*/
 module.exports.reference = function(req, res) {

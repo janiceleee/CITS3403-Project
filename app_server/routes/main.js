@@ -20,6 +20,10 @@ router.get('/logout', ctrlAcc.logout);
 router.get('/meetourteam', ctrlMain.meetourteam);
 module.exports = router;
 
+/*Description page */
+router.get('/description', ctrlMain.description);
+module.exports = router;
+
 /*Reference page */
 router.get('/reference', ctrlMain.reference);
 module.exports = router;
